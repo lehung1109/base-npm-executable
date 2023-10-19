@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/lehung1109/vite-base/issues"
   },
+  "files": [
+    "bin/cli.js"
+  ],
   "homepage": "https://github.com/lehung1109/vite-base#readme",
   "devDependencies": {
     "@types/node": "^20.8.6",
