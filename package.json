@@ -1,0 +1,38 @@
+{
+  "name": "@heroitvn/sne",
+  "version": "1.0.0",
+  "description": "A simple sample npm executable.",
+  "main": "bin/cli.js",
+  "type": "module",
+  "scripts": {
+    "start": "vite build --watch",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sne": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lehung1109/vite-base.git"
+  },
+  "keywords": [
+    "calendar",
+    "reminder"
+  ],
+  "author": "Hung Le <hung0895@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lehung1109/vite-base/issues"
+  },
+  "homepage": "https://github.com/lehung1109/vite-base#readme",
+  "devDependencies": {
+    "@types/node": "^20.8.6",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "concurrently": "^8.2.1",
+    "conf": "^11.0.2",
+    "node-fetch": "^3.3.2",
+    "vite": "^4.4.11"
+  }
+}
