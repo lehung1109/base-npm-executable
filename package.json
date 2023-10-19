@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lehung1109/vite-base.git"
+    "url": "git+https://github.com/lehung1109/sample-npm-executable.git"
   },
   "keywords": [
     "calendar",
@@ -23,12 +23,12 @@
   "author": "Hung Le <hung0895@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lehung1109/vite-base/issues"
+    "url": "https://github.com/lehung1109/sample-npm-executable/issues"
   },
   "files": [
     "bin/cli.js"
   ],
-  "homepage": "https://github.com/lehung1109/vite-base#readme",
+  "homepage": "https://github.com/lehung1109/sample-npm-executable#readme",
   "devDependencies": {
     "@types/node": "^20.8.6",
     "chalk": "^5.3.0",
