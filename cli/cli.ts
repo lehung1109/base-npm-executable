@@ -3,8 +3,9 @@
 import { Command } from 'commander';
 import packageJson from '../package.json';
 import chalk from 'chalk';
-import Conf from 'conf';
 import fetch from 'node-fetch';
+import path from 'path';
+import { createApp } from './create-app.js';
 
 let projectPath: string = '';
 const program = new Command();
@@ -51,7 +52,13 @@ async function notifyUpdate(): Promise<void> {
 }
 
 const run = async () => {
-  const conf = new Conf({ projectName: packageName });
+  const resolvedProjectPath = path.resolve(projectPath);
+
+  await createApp({
+    appPath: resolvedProjectPath
+  });
+
+  console.log('run');
 }
 
 run()

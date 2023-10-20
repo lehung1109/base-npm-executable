@@ -22,7 +22,7 @@ export default defineConfig({
     ssr: true,
     rollupOptions: {
       input: [
-        'scripts/cli.ts',
+        'cli/cli.ts',
       ],
       output: {
         entryFileNames,
