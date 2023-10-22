@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { copy } from '../helpers/copy.js';
 import os from 'os';
+import chalk from 'chalk'
 
 export const filename = fileURLToPath(import.meta.url);
 export const dirname = path.dirname(filename);
@@ -11,6 +12,8 @@ interface Props {
   appName: string;
   root: string;
 }
+
+const { cyan } = chalk;
 
 const installTemplate = async (model: Props) => {
   const { appName, root } = model;
@@ -33,6 +36,19 @@ const installTemplate = async (model: Props) => {
   )
 
   console.log('\nInstalling dependencies:');
+
+  for (const dependency in packageJson.dependencies)
+    console.log(`- ${cyan(dependency)}`)
+
+  if (devDeps) {
+    console.log('\nInstalling devDependencies:')
+    for (const dependency in packageJson.devDependencies)
+      console.log(`- ${cyan(dependency)}`)
+  }
+
+  console.log()
+
+  await install(packageManager, isOnline)
 };
 
 export { installTemplate }
