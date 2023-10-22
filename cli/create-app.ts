@@ -33,16 +33,13 @@ const createApp = async (model: Props) => {
   await makeDir(root);
 
   if (!isFolderEmpty(root, appName)) {
-    console.log(`The directory ${green(appName)} contains files that could conflict or not empty`);
-    console.log();
-    console.log('Either try using a new directory name, or remove the files listed above.');
-    console.log();
+    console.log(`\nThe directory ${green(appName)} contains files that could conflict or not empty`);
+    console.log('\nEither try using a new directory name, or remove files.');
 
     process.exit(1);
   }
 
-  console.log(`Creating a new app in ${green(root)}.`);
-  console.log();
+  console.log(`\nCreating a new app in ${green(root)}.`);
 
   process.chdir(root);
 
@@ -52,11 +49,10 @@ const createApp = async (model: Props) => {
   })
 
   if (tryGitInit(root)) {
-    console.log('Initialized a git repository.')
-    console.log()
+    console.log('\nInitialized a git repository.')
   }
 
-  console.log(`${green('Success!')} Created ${appName} at ${appPath}`)
+  console.log(`\n${green('Success!')} Created ${appName} at ${appPath}`)
 };
 
 export { createApp };

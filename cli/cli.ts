@@ -11,7 +11,7 @@ import { validateNpmName } from '../helpers/validate-pkg.js';
 
 let projectPath: string = '';
 const program = new Command();
-const { green, yellow, bold, cyan } = chalk;
+const { green, yellow, bold, cyan, red } = chalk;
 const packageName = 'sne';
 
 const onPromptState = (state: any) => {
@@ -66,8 +66,6 @@ async function notifyUpdate(): Promise<void> {
 const run = async () => {
   const validation = validateNpmName(path.basename(path.resolve(projectPath)));
 
-  console.log(validation);
-
   if (!validation.valid) {
     const res = await prompts({
       onState: onPromptState,
@@ -107,8 +105,6 @@ const run = async () => {
   await createApp({
     appPath: resolvedProjectPath
   });
-
-  console.log('run');
 }
 
 run()
@@ -116,7 +112,7 @@ run()
     await notifyUpdate();
   })
   .catch(async (error) => {
-    console.log(error);
+    console.log(red(error));
     
     await notifyUpdate();
 
