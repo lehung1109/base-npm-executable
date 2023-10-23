@@ -1,7 +1,7 @@
 {
   "name": "bne",
   "version": "1.0.0",
-  "description": "A simple sample npm executable.",
+  "description": "A base npm executable.",
   "main": "bin/cli.js",
   "type": "module",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lehung1109/sample-npm-executable.git"
+    "url": "git+https://github.com/lehung1109/base-npm-executable.git"
   },
   "keywords": [
     "calendar",
@@ -23,12 +23,12 @@
   "author": "Hung Le <hung0895@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lehung1109/sample-npm-executable/issues"
+    "url": "https://github.com/lehung1109/base-npm-executable/issues"
   },
   "files": [
     "bin/cli.js"
   ],
-  "homepage": "https://github.com/lehung1109/sample-npm-executable#readme",
+  "homepage": "https://github.com/lehung1109/base-npm-executable#readme",
   "devDependencies": {
     "@types/node": "^20.8.6",
     "@types/prompts": "^2.4.7",
