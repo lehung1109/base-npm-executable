@@ -1,5 +1,5 @@
 {
-  "name": "@heroitvn/sne",
+  "name": "bne",
   "version": "1.0.0",
   "description": "A simple sample npm executable.",
   "main": "bin/cli.js",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "sne": "./bin/cli.js"
+    "bne": "./bin/cli.js"
   },
   "repository": {
     "type": "git",

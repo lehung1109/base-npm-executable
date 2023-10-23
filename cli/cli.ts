@@ -12,7 +12,7 @@ import { validateNpmName } from '../helpers/validate-pkg.js';
 let projectPath: string = '';
 const program = new Command();
 const { green, yellow, bold, cyan, red } = chalk;
-const packageName = 'sne';
+const packageName = packageJson.name;
 
 const onPromptState = (state: any) => {
   if (state.aborted) {
